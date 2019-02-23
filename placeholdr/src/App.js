@@ -6,6 +6,8 @@ import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import Profile from './components/user/Profile';
 import Landing from './components/landing/LandingPage';
 import Profile_Init from './components/landing/Paginator';
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
 
 class App extends Component {
   render() {
@@ -14,9 +16,11 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Switch>
-            <Route exact path='/' component={Landing} />
+            <Route exact path='/'         component={Landing} />
             <Route exact path='/profile/' component={Profile} />
-            <Route path='/profile/p_init' component={Profile_Init} />
+            <Route exact path='/profile/p_init' component={Profile_Init} />
+            <Route exact path='/auth/signin'    component={SignIn} />
+            <Route exact path='/auth/signup'    component={SignUp} />
           </Switch>
         </div>
       </BrowserRouter>
