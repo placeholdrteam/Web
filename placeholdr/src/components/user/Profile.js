@@ -16,7 +16,7 @@ class Profile extends React.Component
                     </div>
                     <div className="col s4">Description</div>
                     <div className="col s10">
-                        
+                        REDO
                     </div>
                     <div className="col s6">
                         INSERT_TAGS_TABLE

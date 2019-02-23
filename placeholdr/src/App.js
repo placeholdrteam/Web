@@ -4,7 +4,9 @@ import './App.css';
 import Navbar from './components/Nav/Navbar';
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import Profile from './components/user/Profile';
-import Landing from './components/landing/LandingPage'
+import Landing from './components/landing/LandingPage';
+import Profile_Init from './components/landing/Paginator';
+
 class App extends Component {
   render() {
     return (
@@ -13,7 +15,8 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path='/' component={Landing} />
-            <Route path='/profile/' component={Profile} />
+            <Route exact path='/profile/' component={Profile} />
+            <Route path='/profile/p_init' component={Profile_Init} />
           </Switch>
         </div>
       </BrowserRouter>
