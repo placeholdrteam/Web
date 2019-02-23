@@ -1,0 +1,13 @@
+.profile{
+    margin: 20px auto 20px auto;
+}
+
+.profile div{
+    margin: 15px auto 15px auto;
+}
+
+.head{
+    font-size: 5vw;
+    align-items: center;
+    justify-content: center;
+}
