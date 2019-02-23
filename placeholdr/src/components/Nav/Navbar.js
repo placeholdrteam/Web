@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SignedInLinks from '../auth/SignedInLinks';
-import SignedOutLinks from '../auth/SignedOutLinks';
+import SignedInLinks from './SignedInLinks';
+import SignedOutLinks from './SignedOutLinks';
 import './Navbar.css';
 
 class Navbar extends React.Component

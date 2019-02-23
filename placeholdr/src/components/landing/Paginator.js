@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import Pagination from "react-js-pagination";
 //require("bootstrap/less/bootstrap.less");
 
@@ -25,7 +24,7 @@ class Paginator extends Component {
           activePage={this.state.activePage}
           itemsCountPerPage={1}
           totalItemsCount={10}
-          pageRangeDisplayed={10}
+          pageRangeDisplayed={5}
           onChange={this.handlePageChange}
         />
       </div>
