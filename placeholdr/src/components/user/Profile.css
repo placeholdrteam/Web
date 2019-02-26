@@ -11,3 +11,26 @@
     align-items: center;
     justify-content: center;
 }
+
+.user-name{
+    font-size: 5vw;
+
+}
+
+.image-container {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: auto;
+    height: 450px;
+    margin-left: -10px;
+    margin-top: -40px;
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+}

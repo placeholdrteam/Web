@@ -1,6 +1,7 @@
 import React from 'react';
-//import { NavLink } from 'react-router-dom';
 import './Profile.css';
+import UserImage from './User_Image';
+
 
 class Profile extends React.Component
 {
@@ -8,13 +9,15 @@ class Profile extends React.Component
         return (
             <div className="container profile">
                 <div className="row">
-                    <div className="col s6">
+                    <div className="col s6 user-name">
                         Marty Cabbage
                     </div>
                     <div className="col s6">
-                        INSERT IMAGE_USER
+                        <UserImage />
                     </div>
-                    <div className="col s4">Description</div>
+                    <div className="col s4">
+                        Description
+                    </div>
                     <div className="col s10">
                         REDO
                     </div>
