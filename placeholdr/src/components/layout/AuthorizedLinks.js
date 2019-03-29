@@ -12,7 +12,6 @@ class AuthorizedLinks extends React.Component {
   render() {
     return (
         <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><a href="sass.html">Authorized Links</a></li>
           <li><a href="#" onClick={this.handleLogoutClicked}>Logout</a></li>
         </ul>
     )

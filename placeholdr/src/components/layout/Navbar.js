@@ -25,7 +25,7 @@ class Navbar extends React.Component {
 
 const mapStateToProps = (state, previousProps) => {
   return {
-    isAuthorized: !!state.fb.auth.uid
+    isAuthorized: !!state.firebase.auth.uid
   }
 }
 

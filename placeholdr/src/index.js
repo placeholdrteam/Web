@@ -9,10 +9,15 @@ import { getFirebase, reactReduxFirebase } from 'react-redux-firebase'
 import { getFirestore, reduxFirestore } from 'redux-firestore'
 import firebaseConfig from './config/firebase'
 
-const store = createStore(rootReducer, compose(
-    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-    reactReduxFirebase(firebaseConfig),
-    reduxFirestore(firebaseConfig)
-))
+const store = createStore(rootReducer,
+    compose(
+        applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
+        reactReduxFirebase(firebaseConfig, {userProfile: 'users', useFirestoreForProfile: true, attachAuthIsReady: true}),
+        reduxFirestore(firebaseConfig) // redux bindings for firestore
+    )
+);
 
-ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'))
+store.firebaseAuthIsReady.then(() => {
+  ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'))
+})
+
