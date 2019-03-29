@@ -17,6 +17,15 @@ export const createUser = (fields) => {
   }
 }
 
+export const loginUser = (fields) => {
+  return (dispatch, getState, { getFirebase }) => {
+    const fb = getFirebase()
+    fb.auth().signInWithEmailAndPassword(fields.email, fields.password).then(() => {
+      dispatch({ type: actions.auth.LOGIN_USER })
+    })
+  }
+}
+
 export const logoutUser = () => {
   return (dispatch, getState, { getFirebase }) => {
     const fb = getFirebase()
