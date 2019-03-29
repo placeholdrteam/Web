@@ -1,13 +1,13 @@
 import React from 'react'
 
-class Login extends React.Component {
+class Root extends React.Component {
   render() {
     return (
         <div>
-          <h1>Login</h1>
+          <h1>Root of App</h1>
         </div>
     )
   }
 }
 
-export default Login
+export default Root
